@@ -1,0 +1,26 @@
+// main: ../style.less
+.btn {
+    background: none;
+    border: 3px solid @white;
+    color: @white;
+    font-family: inherit;
+    font-weight: 700;
+    padding: 13px 44px;
+    cursor: pointer;
+
+    transition: background-color .2s linear, color .2s linear;
+
+    &:hover {
+        background-color: @white;
+        color: @accent;
+    }
+
+    &--blue {
+        color: @accent;
+        border-color: @accent;
+        &:hover {
+            background-color: @accent;
+            color: @white;
+        }
+    }
+}
