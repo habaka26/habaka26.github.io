@@ -15,6 +15,21 @@ header {
     justify-content: space-between;
     align-items:center;
     border-bottom: 1px solid @white;
+
+    @media @tablet {
+        border: 0;
+    }
+}
+.header__menu {
+
+    @media @tablet {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: @accent;
+    }
 }
 .header__link {
     color: @white;
@@ -31,5 +46,11 @@ header {
 
     &:hover {
         color: #dedede;
+    }
+
+    @media @tablet {
+        display: block;
+        margin: 0;
+        padding: 30px 10px;
     }
 }
