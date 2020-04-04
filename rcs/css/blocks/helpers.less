@@ -3,9 +3,37 @@
     color: @white;
     font-size: 48px;
     font-weight: 700;
+
+    @media @tablet {
+        font-size: 36px;
+    }
+
+    @media @phone {
+        font-size: 28px;
+    }
+
+    @media @phone-sm {
+        font-size: 24px;
+    }
+
 }
 .title-accent {
     color: @accent;
     font-size: 64px;
     font-weight: 700;
+
+    @media @phone-sm {
+        font-size: 48px;
+    }
+}
+.logo {
+    height: 77px;
+
+    @media @phone {
+        height: 50px;
+    }
+
+    @media @phone-sm {
+        height: 45px;
+    }
 }

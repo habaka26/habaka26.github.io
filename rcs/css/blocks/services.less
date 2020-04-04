@@ -3,6 +3,10 @@
     position: relative;
     margin-bottom: 70px;
 
+    @media @phone-sm {
+        margin-bottom: 40px;
+    }
+
 }
 .services__title {
     text-align: center;
@@ -15,11 +19,16 @@
         margin: 27px auto;
         height: 3px;
     }
+
 }
 .services__inner {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 72px;
+
+    @media @phone-sm {
+        margin-bottom: 40px;
+    }
 }
 .services__col {
 
@@ -42,7 +51,9 @@
 
     @media @notebook {
         width: 100%;
+        margin-right: 0;
     }
+
 }
 .services__content {
     padding-left: 22px;

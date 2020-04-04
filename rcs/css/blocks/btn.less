@@ -7,6 +7,7 @@
     font-weight: 700;
     padding: 13px 44px;
     cursor: pointer;
+    font-size: 18px;
 
     transition: background-color .2s linear, color .2s linear;
 
@@ -22,5 +23,9 @@
             background-color: @accent;
             color: @white;
         }
+    }
+
+    @media @phone {
+        font-size: 12px;
     }
 }

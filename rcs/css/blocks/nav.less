@@ -2,6 +2,12 @@
 .nav {
     background-color: @accent;
     margin-bottom: 150px;
+    @media @tablet {
+        margin-bottom: 80px;
+    }
+    @media @phone-sm {
+        margin-bottom: 50px;
+    }
 }
 .nav__inner {
     display: flex;
@@ -19,5 +25,14 @@
     }
     &.active {
         text-decoration: underline;
+    }
+    @media @tablet {
+        font-size: 18px;
+    }
+    @media @phone {
+        font-size: 14px;
+    }
+    @media @phone-sm {
+        font-size: 10px;
     }
 }
