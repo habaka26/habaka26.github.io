@@ -1,0 +1,47 @@
+// main: ../style.less
+.form {
+    text-align: center;
+}
+.form__group {
+    margin-bottom: 20px;
+}
+.form__label {
+    font-size: 14px;
+    color: @accent;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 0.6rem;
+
+    @media @phone-sm {
+        font-size: 10px;
+    }
+}
+
+.form__input{
+    display: block;
+    width: 100%;
+
+    padding: 18px 32px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    border: 1px solid fade(#707070, 30%);
+    border-radius: 40px;
+    color: @accent;
+
+    transition: border-color .2s linear;
+    &:focus {
+        outline: none;
+
+        border-color: #36abc7;
+    }
+
+    &::placeholder {
+        color: @accent;
+    }
+    @media @phone-sm {
+        padding: 10px 24px;
+    }
+}
+

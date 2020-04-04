@@ -1,10 +1,32 @@
 // main: ../style.less
-header {
+.header {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+
+        transform:translate3d(0,0,0);
+
+        background-color: @accent;
+    }
+    &.fixed .header__inner {
+        border: 0;
+
+    }
+    &.fixed .logo {
+        display: none;
+    }
+    &.fixed .menu__toggle {
+        top: 20px;
+    }
 }
 .header__logo {
     padding-top: 23px;
@@ -30,12 +52,15 @@ header {
         left: 0;
         background-color: @accent;
     }
+    &.active {
+        display: block;
+    }
 }
 .header__link {
     color: @white;
     text-decoration: none;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     margin-right: 70px;
 
     transition: color .2s linear;

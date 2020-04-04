@@ -18,6 +18,19 @@
         </g>
     </symbol>
 
+    <symbol id="close" viewBox="0 0 511.76 511.76">
+        <g>
+            <path d="M436.896,74.869c-99.84-99.819-262.208-99.819-362.048,0c-99.797,99.819-99.797,262.229,0,362.048
+            c49.92,49.899,115.477,74.837,181.035,74.837s131.093-24.939,181.013-74.837C536.715,337.099,536.715,174.688,436.896,74.869z
+             M361.461,331.317c8.341,8.341,8.341,21.824,0,30.165c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251
+            l-75.413-75.435l-75.392,75.413c-4.181,4.16-9.643,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251
+            c-8.341-8.341-8.341-21.845,0-30.165l75.392-75.413l-75.413-75.413c-8.341-8.341-8.341-21.845,0-30.165
+            c8.32-8.341,21.824-8.341,30.165,0l75.413,75.413l75.413-75.413c8.341-8.341,21.824-8.341,30.165,0
+            c8.341,8.32,8.341,21.824,0,30.165l-75.413,75.413L361.461,331.317z"/>
+        </g>
+    </symbol>
+
+
     <symbol id="vk" viewBox="0 0 548.358 548.358">
         <g>
             <path d="M545.451,400.298c-0.664-1.431-1.283-2.618-1.858-3.569c-9.514-17.135-27.695-38.167-54.532-63.102l-0.567-0.571
@@ -71,17 +84,18 @@
 
 </svg>
 <!-- HEADER -->
-<header class="header">
+<header class="header" id="header">
     <div class="container">
         <div class="header__inner">
             <div class="header__logo">
-                <img class="logo" src="assets/img/logo.png" alt="">
+                <img class="logo" src="assets/img/logo.png" alt="RCS">
             </div>
-            <nav class="header__menu">
-                <a href="" class="header__link">Главная</a>
-                <a href="" class="header__link">Услуги</a>
-                <a href="" class="header__link">О нас</a>
-                <a href="" class="header__link">Контакты</a>
+            <nav class="header__menu" id="menu">
+                <a href="" class="header__link" data-scroll="#intro">Главная</a>
+                <a href="" class="header__link" data-scroll="#services">Услуги</a>
+                <a href="" class="header__link" data-scroll="
+                #about">О нас</a>
+                <a href="" class="header__link" data-scroll="#contacts">Контакты</a>
             </nav>
             <button type="button" class="menu__toggle" id="menu__toggle">
                 <span class="menu__toggle_item">
@@ -93,7 +107,7 @@
 </header>
 <!-- /.HEADER -->
 <!-- INTRO -->
-<section class="intro">
+<section class="intro" id="intro">
     <div class="container">
         <div class="intro__inner">
             <h1 class="intro__title title">
@@ -102,7 +116,8 @@
 Консалтинговую Службу
             </h1>
 
-            <button class="btn intro__btn">
+            <button class="btn intro__btn" data-scroll="
+                #about">
                 УЗНАТЬ ПОДРОБНЕЕ
             </button>
         </div>
@@ -110,7 +125,7 @@
 </section>
 
 <!-- SERVICES -->
-<div class="container">
+<div class="container" id="services">
     <section class="services">
         <h2 class="services__title title-accent">
             Услуги
@@ -123,7 +138,7 @@
                         РЕГИСТРАЦИЯ<br>
                         ЮРИДИЧЕСКИХ ЛИЦ
                     </div>
-                    <a class="services__link" href="">
+                    <a class="services__link" href="" data-modal="#modal">
                         Заказать услугу <img src="assets/img/arrow.png" alt="">
                     </a>
                 </div>
@@ -135,7 +150,7 @@
                         ЮРИДИЧЕСКИЙ БИЗНЕС<br>
                         КОНСАЛТИНГ
                     </div>
-                    <a class="services__link" href="">
+                    <a class="services__link" href="" data-modal="#modal">
                         Заказать услугу <img src="assets/img/arrow.png" alt="">
                     </a>
                 </div>
@@ -147,7 +162,7 @@
                        ТРУДОВОЕ<br>
                        ПРАВО
                     </div>
-                    <a class="services__link" href="">
+                    <a class="services__link" href="" data-modal="#modal">
                         Заказать услугу <img src="assets/img/arrow.png" alt="">
                     </a>
                 </div>
@@ -159,7 +174,7 @@
                         <div class="services__name">
                             БУХГАЛТЕРСКОЕ<br>
                             СОПРОВОЖДЕНИЕ         </div>
-                        <a class="services__link" href="">
+                        <a class="services__link" href="" data-modal="#modal">
                         Заказать услугу <img src="assets/img/arrow.png" alt="">
                         </a>
                     </div>
@@ -173,27 +188,74 @@
                             КОНСАЛТИНГ ДЛЯ<br>
                             ОБЩЕПИТА
                         </div>
-                        <a class="services__link" href="">
+                        <a class="services__link" href="" data-modal="#modal">
                         Заказать услугу <img src="assets/img/arrow.png" alt="">
                         </a>
                     </div>
 
             </div>
 
-            <div class="services__col services__col--all">
+            <div class="services__col hide" data-lol="ok">
+                <div class="services__content">
+                    <div class="services__name">
+                        КОНСАЛТИНГ ДЛЯ <br>СЕЛЬХОЗПРОИЗВОДИТЕЛЕЙ
+                    </div>
+                    <a class="services__link" href="" data-modal="#modal">
+                        Заказать услугу <img src="assets/img/arrow.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="services__col hide" data-lol="ok">
+               <div class="services__content">
+                    <div class="services__name">
+                        БИЗНЕС-ПЛАН<br> И ТЭО
+                    </div>
+                    <a class="services__link" href="" data-modal="#modal">
+                        Заказать услугу <img src="assets/img/arrow.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="services__col hide" data-lol="ok">
+               <div class="services__content">
+                    <div class="services__name">
+                       ВИЗОВАЯ<br> ПОДДЕРЖКА
+                    </div>
+                    <a class="services__link" href="" data-modal="#modal">
+                        Заказать услугу <img src="assets/img/arrow.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="services__col hide" data-lol="ok">
+
+                   <div class="services__content">
+                        <div class="services__name">
+                            ЛИЦЕНЗИИ<br> И РАЗРЕШЕНИЯ
+                        </div>
+                        <a class="services__link" href="" data-modal="#modal">
+                        Заказать услугу <img src="assets/img/arrow.png" alt="">
+                        </a>
+                    </div>
+
+            </div>
+
+
+            <div class="services__col services__col--all" id="services__all">
                <div class="services__content">
                     <div class="services__name services__name--all">
                         ВСЕ <br>УСЛУГИ
                     </div>
-                    <a class="services__link services__link--all" href="">
-                        Заказать услугу <img src="assets/img/barrow.png" alt="">
+                    <a class="services__link services__link--all" href="" data-salam="ok">
+                        Посмотреть все <img src="assets/img/barrow.png" alt="">
                     </a>
                 </div>
             </div>
 
         </div>
         <div class="services__button">
-            <button class="btn btn--blue">
+            <button class="btn btn--blue" data-modal="#modal">
                 ЗАКАЗАТЬ УСЛУГУ
             </button>
         </div>
@@ -202,19 +264,19 @@
 <!-- /.SERVICES -->
 <!-- /.INTRO -->
 <!-- NAV -->
-<div class="nav">
+<div class="nav" id="about">
     <div class="container">
         <div class="nav__inner">
-            <a href="" class="nav__links">О компании</a>
-            <a href="" class="nav__links active">Наши преимущества</a>
-            <a href="" class="nav__links">Гарантии</a>
+            <a href="" class="nav__links" data-filter="about">О компании</a>
+            <a href="" class="nav__links" data-filter="advantages">Наши преимущества</a>
+            <a href="" class="nav__links" data-filter="guarantee">Гарантии</a>
         </div>
     </div>
 </div>
 <!-- /.NAV -->
 <!-- ABOUT -->
 <div class="container">
-    <div class="about">
+    <div class="about hide" data-cat="advantages">
         <h2 class="about__title title-accent">
             Наши преимущества
         </h2>
@@ -254,13 +316,65 @@
             </p>
         </div>
         <div class="about__button">
-            <button class="btn btn--blue">ЗАКАЗАТЬ УСЛУГИ</button>
+            <button class="btn btn--blue" data-modal="#modal">ЗАКАЗАТЬ УСЛУГИ</button>
         </div>
     </div>
+
+    <div class="about" data-cat="about">
+        <h2 class="about__title title-accent">
+            О компании
+        </h2>
+        <div class="about__block">
+            <p class="about__text">
+                Таким образом реализация намеченных плановых заданий взначительной степени
+                обуславливает создание форм развития. Не следует, однако забывать, что реализация
+                намеченных плановых заданий способствует подготовки и реализации системы обучения
+                кадров, соответствует насущным потребностям.
+                Таким образом реализация намеченных плановых заданий взначительной степени
+                обуславливает создание форм развития. Не следует, однако забывать, что реализация
+                намеченных плановых заданий способствует подготовки и реализации системы обучения
+                кадров, соответствует насущным потребностям.
+            </p>
+        </div>
+
+
+        <div class="about__button">
+            <button class="btn btn--blue" data-modal="#modal">ЗАКАЗАТЬ УСЛУГИ</button>
+        </div>
+    </div>
+
+    <div class="about hide" data-cat="guarantee">
+        <h2 class="about__title title-accent">
+            Гарантии
+        </h2>
+
+        <div class="about__block">
+            <p class="about__text">
+                Таким образом реализация намеченных плановых заданий взначительной степени
+                обуславливает создание форм развития. Не следует, однако забывать, что реализация
+                намеченных плановых заданий способствует подготовки и реализации системы обучения
+                кадров, соответствует насущным потребностям.
+            </p>
+        </div>
+
+        <div class="about__block">
+            <p class="about__text">
+                Таким образом реализация намеченных плановых заданий взначительной степени
+                обуславливает создание форм развития. Не следует, однако забывать, что реализация
+                намеченных плановых заданий способствует подготовки и реализации системы обучения
+                кадров, соответствует насущным потребностям.
+            </p>
+        </div>
+        <div class="about__button">
+            <button class="btn btn--blue" data-modal="#modal">ЗАКАЗАТЬ УСЛУГИ</button>
+        </div>
+    </div>
+
+
 </div>
 <!-- /.ABOUT -->
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer" id="contacts">
     <div class="container">
         <div class="footer__inner">
             <div class="footer__col">
@@ -279,19 +393,19 @@
                         </a>
                     </div>
                     <div class="footer__social">
-                        <a href="" class="footer__link">
-                            <svg class="footer__icon">
+                        <a href="https://www.facebook.com/profile.php?id=100009494192235" target="_blank" class="footer__link">
+                            <svg class="footer__icon" >
                                 <use xlink:href="#facebook">
                                 </use>
                             </svg>
                         </a>
-                        <a href="" class="footer__link">
+                        <a href="https://www.facebook.com/profile.php?id=100009494192235" target="_blank" class="footer__link">
                             <svg class="footer__icon">
                                 <use xlink:href="#vk">
                                 </use>
                             </svg>
                         </a>
-                        <a href="" class="footer__link">
+                        <a href="https://www.instagram.com/anara_nomad/" target="_blank" class="footer__link">
                             <svg class="footer__icon">
                                 <use xlink:href="#instagram">
                                 </use>
@@ -332,5 +446,52 @@
     </div>
 </footer>
 <!-- /.FOOTER -->
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal__dialog">
+       <button class="modal__close" data-close>
+           <svg class="close">
+                <use xlink:href="#close">
+                </use>
+           </svg>
+       </button>
+        <h2 class="modal__title title-accent">
+            Заказать услугу
+        </h2>
+        <div class="modal__content">
+            <form class="form" action="/" method="post">
+                          <input name="project_name" type="hidden" value="РКС">
+                          <input name="admin_email" type="hidden" value="a.temirbayeva@kazrcs.kz">
+                          <input name="form_subject" type="hidden" value="Заявка на сайте">
+                           <div class="form__group">
+                               <label class="form__label" for="input-email">Ваше имя</label>
+                               <input type="text" name="input-email" class="form__input" id="input-name">
+                           </div>
+
+                           <div class="form__group">
+                               <label class="form__label" for="input-email">Ваш номер</label>
+                               <input type="text" name="input-email" class="form__input" id="input-number">
+                           </div>
+                           <div class="form__group">
+                               <label class="form__label" for="input-email">Ваш E-mail</label>
+                               <input type="text" name="input-email" class="form__input" id="input-email">
+                           </div>
+                           <button class="modal__btn" data-close>
+                                Отправить
+                           </button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /.MODAL -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+    <script src="app.js">
+    </script>
 </body>
 </html>
