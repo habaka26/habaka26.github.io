@@ -459,24 +459,22 @@
             Заказать услугу
         </h2>
         <div class="modal__content">
-            <form class="form" action="/" method="post">
-                          <input name="project_name" type="hidden" value="РКС">
-                          <input name="admin_email" type="hidden" value="a.temirbayeva@kazrcs.kz">
-                          <input name="form_subject" type="hidden" value="Заявка на сайте">
+            <form class="form" method="post" id="form">
+
                            <div class="form__group">
                                <label class="form__label" for="input-email">Ваше имя</label>
-                               <input type="text" name="input-email" class="form__input" id="input-name">
+                               <input type="text" name="name" class="form__input">
                            </div>
 
                            <div class="form__group">
                                <label class="form__label" for="input-email">Ваш номер</label>
-                               <input type="text" name="input-email" class="form__input" id="input-number">
+                               <input type="text" name="number" class="form__input">
                            </div>
                            <div class="form__group">
                                <label class="form__label" for="input-email">Ваш E-mail</label>
-                               <input type="text" name="input-email" class="form__input" id="input-email">
+                               <input type="text" name="email" class="form__input">
                            </div>
-                           <button class="modal__btn" data-close>
+                           <button class="modal__btn">
                                 Отправить
                            </button>
 

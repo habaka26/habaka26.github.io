@@ -163,18 +163,15 @@ $(function() {
 
     });
 
-    $(".form__input").submit(function() { //Change
-        var th = $(this);
+    $("#form").submit(function() {
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
-            data: th.serialize()
+            url: "mail.php",
+            data: $(this).serialize()
         }).done(function() {
-            alert("Спасибо за заявку!");
-            setTimeout(function() {
-                // Done Functions
-                th.trigger("reset");
-            }, 1000);
+            $(this).find("input").val("");
+            alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+            $("#form").trigger("reset");
         });
         return false;
     });
