@@ -1,0 +1,59 @@
+// main: ../style.less
+.header {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.header__inner {
+    margin-top: 2.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__link {
+    color: @white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 3.81em;
+    position: relative;
+   
+    &:last-child {
+        margin-right: 0;
+    }
+    &:after {
+        content:"";
+        position: absolute;
+        bottom: -0.8em;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        height: 2px;
+        opacity: 0;
+        background-color: @white;
+        transition: opacity .2s linear;
+    } 
+    &:hover {
+        &:after {
+            opacity: 1;
+        }
+    }
+    &-btn {
+        border: 1px solid @white;
+        font-weight: 700;
+        padding: 1.2em 2.2em;
+        border-radius: 2em;
+        transition: background-color .2s linear,
+        color .2s linear;
+        &:hover {
+            &:after {
+                opacity: 0;
+            }
+            background-color: @white;
+            color: @accent;
+        }
+    }
+}
+
