@@ -1,0 +1,72 @@
+// main: ../style.less
+.features {
+    background-color: @graybg;
+}
+
+.features__inner {
+    padding-top: 4.375rem;
+    padding-bottom: 14.375rem;
+}
+
+.features__header {
+    text-align: center;
+
+    color: @black;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 5.18rem;
+}
+.features__container {
+    display: flex;
+}
+.features__col {
+    text-align: center;
+    width: 33.33333%;
+    position: relative;
+}
+.features__block {
+    background-color: @white;
+    width: 70%;
+    position: absolute;
+    top: 65%;
+    left: 15%;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+}
+.features__content {
+    text-align: center;
+    padding: 2.18rem;
+}
+.features__title {
+    font-size: 1.125rem;
+    color: @black;
+    font-weight: 700;
+    margin-bottom: 0.7em;
+}
+.features__text {
+    line-height: 1.5;
+    font-size: 0.875rem;
+    color: @black;
+    margin-bottom: 2em;
+}
+.features__button {
+    color: @accent;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    &:after {
+        display: block;
+        content:"";
+        background-color: @accent;
+        height: 2px;
+        width: 0;
+        transition: width .2s linear;
+    }
+
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
+}

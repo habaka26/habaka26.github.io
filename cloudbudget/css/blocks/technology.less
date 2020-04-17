@@ -1,0 +1,49 @@
+//main: ../style.less
+.technology__header {
+    text-align: center;
+
+    color: @black;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-top: 1.94em;
+    margin-bottom: 2.77em;
+}
+.technology__container {
+    display: flex;
+    margin-bottom: 6.25rem;
+}
+.technology__col {
+    text-align: center;
+    width: 25%;
+}
+.technology__number {
+    font-size: 6.25rem;
+    color: fade(@black, 20%);
+    margin-bottom: 0.3em;
+    position: relative;
+    display: inline-block;
+}
+.technology__class {
+    font-size: 1.125rem;
+    color: @black;
+    font-weight: 700;
+
+}
+
+.technology__icon {
+    position: absolute;
+    color: @black;
+    opacity: 0.95;
+    width: 80px;
+    height: 80px;
+    left: 20%;
+    top: 55%;
+
+    &--cloud {
+        left: 17%;
+        top: 50%;
+    }
+    &--csv {
+        left: 30%;
+    }
+}

@@ -1,0 +1,52 @@
+// main: ../style.less
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4.28rem;
+}
+.header__link {
+    margin-right: 1.42em;
+    color: @white;
+    font-size: 0.875rem;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 2;
+    
+    &:after {
+        content:"";
+        background-color: transparent;
+        height: 2px;
+        width: 100%;
+        transition: background-color .2s linear;
+        display: block;
+    }
+    &:hover {
+        &:after {
+            background-color: @white;
+        }
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.header__switch {
+    font-size: 0.875rem;
+    color: @white;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.header__button {
+    margin-left: 2em;
+}

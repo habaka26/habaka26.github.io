@@ -1,0 +1,42 @@
+// main: ../style.less
+.focus {
+    background-color: @accent;
+}
+.focus__inner {
+    display: flex;
+    padding-top: 5.375rem;
+    padding-bottom: 4rem;
+    align-items: center;
+}
+.focus__left {
+    width: 50%;
+}
+.focus__right {
+    width: 50%;
+}
+
+.focus__title {
+    color: @white;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+}
+.focus__text {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: @white;
+    margin-bottom: 3.2em;
+}
+.focus__button {
+    margin-right: 1.7em;
+
+
+}
+.focus__icon {
+    width: 32px;
+    height: 32px;
+    transition: transform .3s linear;
+    &:hover {
+        transform: translateY(-0.2rem);
+    }
+}

@@ -1,0 +1,62 @@
+// main: ../style.less
+.contact {
+    display: flex;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+}
+.contact__left {
+    width: 50%;
+}
+.contact__right {
+    width: 50%;
+}
+.contact__title {
+    font-size: 2.25rem;
+    color: @black;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+.contact__text {
+    font-size: 0.875rem;
+    color: @black;
+    font-weight: 400;
+}
+.contact__name {
+    font-family: inherit;
+    color: #8993A1;
+    font-size: 1rem;
+    padding-left: 1.5rem;
+    padding-top: 1.2rem;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    padding-bottom: 1.2rem;
+    width: 50%;
+    &:focus {
+        outline:none;
+        border-color: @accent;
+    }
+    &--first {
+        margin-right: 1rem;
+    }
+
+    &--number {
+        width: 100%;
+    }
+}
+.contact__field {
+    margin-bottom: 1rem;
+    display: flex;
+}
+.contact__selection {
+    margin-bottom: 2rem;
+}
+.contact__button {
+    background-color: transparent;
+    border: 1px solid @accent;
+    color: @accent;
+
+    &:hover {
+        background-color: @accent;
+        color: @white;
+    }
+}

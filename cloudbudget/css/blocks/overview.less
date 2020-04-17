@@ -1,0 +1,57 @@
+// main: ../style.less
+.overview {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6.25rem;
+}
+.overview__left {
+    width: 50%;
+}
+.overview__right {
+    width: 50%;
+}
+.overview__title {
+    font-size: 2.25rem;
+    color: @black;
+    font-weight: 700;
+    margin-bottom: 1.2em;
+}
+.overview__desc {
+    font-size: 0.875rem;
+    color: @black;
+    line-height: 1.4;
+}
+.overview__button {
+    color:@accent;
+    text-decoration: none;
+    font-size: 0.875rem;
+    display: inline-block;
+    margin-top: 2em;
+    &:after {
+        display: block;
+        content:"";
+        background-color: @accent;
+        height: 1px;
+        width: 0;
+        transition: width .2s linear;
+    }
+
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
+}
+.overview__video {
+    position: relative;
+}
+.overview__play {
+    position: absolute;
+    top: 40%;
+    right: 94%;
+    cursor: pointer;
+    transition: transform .3s linear;
+    &:hover {
+        transform: translateY(-0.2rem);
+    }
+}
