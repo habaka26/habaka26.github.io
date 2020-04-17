@@ -13,6 +13,10 @@
 .intro__content {
     margin-top: 7rem;
     margin-bottom: 10rem;
+
+    @media @phone-sm {
+        margin-bottom: 6rem;
+    }
 }
 
 .intro__suptitle {
@@ -22,27 +26,28 @@
     text-transform: uppercase;
     position: relative;
     line-height: 2.28;
+    display: inline-block;
     &:before {
         content:"";
-        display: block;
+        display: inline-block;
         width: 1.714em;
         background-color: @white;
         height: 2px;
-        position: absolute;
-        left: 415px;
-        z-index: 1;
-        top: 50%;
+        vertical-align: middle;
+        margin-right: 1.5em;
     }
+
     &:after {
         content:"";
-        display: block;
+        display: inline-block;
         width: 1.714em;
         background-color: @white;
         height: 2px;
-        position: absolute;
-        right: 415px;
-        z-index: 1;
-        top: 50%;
+        vertical-align: middle;
+        margin-left: 1.5em;
+    }
+    @media @phone-sm {
+        font-size: 0.6rem;
     }
 }
 
@@ -52,16 +57,30 @@
     font-weight: 500;
     letter-spacing: -0.04em;
     margin-bottom: 0.1em;
+
+    @media @phone {
+        font-size: 4rem;
+    }
+    @media @phone-sm {
+        font-size: 3rem;
+    }
 }
 .intro__text {
     color: @white;
     font-size: 1rem;
     line-height: 1.75;
+
+    @media @phone {
+        font-size: .875rem;
+    }
     
 }
 
 .intro__arrow {
     transition: transform .3s linear;
+    @media @phone {
+        width: 5rem;
+    }
     &:hover {
         transform: translateY(5px);
     }

@@ -7,6 +7,11 @@
     text-align: center;
     padding-top: 11.25rem;
     padding-bottom: 11.625rem;
+
+    @media @phone-sm {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
 }
 .map__suptitle {
     font-size: 0.875rem;
@@ -14,6 +19,11 @@
     font-weight: 700;
     letter-spacing: 0.05em;
     line-height: 2.285;
+
+    @media @phone {
+        font-size: 0.75rem;
+    }
+
 }
 .map__title {
     color: @white;
@@ -22,4 +32,27 @@
     letter-spacing: -0.04em;
     line-height: 1.2;
     margin-bottom: 0.6em;
+    @media @phone {
+        font-size: 3rem;
+    }
+    @media @phone {
+        font-size: 2.5rem;
+    }
 }
+.map__buttons {
+    @media @phone-sm {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+}
+.map__button {
+    font-size: 0.6rem;
+    @media @phone-sm {
+        font-size: 0.5em;
+        margin-bottom: 1.5em;
+        width: 50%;
+        padding: 2.5em 0;
+    }
+}
+

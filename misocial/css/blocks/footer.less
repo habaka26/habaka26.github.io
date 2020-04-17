@@ -6,7 +6,26 @@
     margin-top: 3.125rem;
     padding-bottom: 1.812rem;
     border-bottom: 1px solid #f2f2f3;
+    flex-wrap: wrap;
+
+    @media @notebook {
+        text-align: center;
+    }
 }
+.footer__logo {
+    @media @notebook {
+        display: none;
+    }
+}
+.footer__nav {
+    @media @notebook {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .footer__link {
     text-decoration: none;
     font-size: 1rem;
@@ -18,8 +37,27 @@
     &:first-child {
         color: #756edc;
     }
+
+    @media @notebook {
+        display: block;
+        width: 100%;
+        margin-bottom: 1em;
+        margin-right: 0;
+    }
+    @media @phone {
+        font-size: 0.875rem;
+    }
+    @media @phone-sm {
+        font-size: 0.75rem;
+    }
     &--button {
         border: 1px solid #6a6a77;
         padding: 1em 1.5em;
+        @media @notebook {
+            width: 30%;
+        }
+        @media @phone {
+            width: 40%;
+        }
     }
 }

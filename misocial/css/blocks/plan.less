@@ -5,37 +5,43 @@
 .plan__inner {
     padding-top: 7.5rem;
     padding-bottom: 7.5rem ;
+    @media @phone-sm {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
 }
 .plan__head {
     text-align: center;
     padding-bottom: 6.25rem ;
+
+    @media @phone-sm {
+        padding-bottom: 3.5rem;
+    }
 }
 .plan__subheader {
     font-size: 0.875rem;
     color:@accent;
     letter-spacing: 0.05em;
     margin-bottom: 2rem;
-    position: relative;
+    display: inline-block;
     font-weight: 700;
     &:before {
         background-color: #6e45e2;
         width: 1.5rem;
         height: 2px;
+        vertical-align: middle;
         content:"";
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 575px;
+        display: inline-block;
+        margin-right: 2.5em;
     }
     &:after {
         background-color: #6e45e2;
         width: 1.5rem;
+        vertical-align: middle;
         height: 2px;
         content:"";
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 575px;
+        display: inline-block;
+        margin-left: 2.5em;
     }
 }
 .plan__header {
@@ -44,15 +50,30 @@
     letter-spacing: -0.04em;
     font-weight: 500;
     margin-bottom: 0.2em;
+    @media @phone {
+        font-size: 3rem;
+    }
+    @media @phone-sm {
+        font-size: 2.6rem;
+    }
 }
 .plan__text {
     color: @text;
     font-size: 1rem;
     line-height: 1.75;
+
+    @media @phone-sm {
+        font-size: 0.75rem;
+    }
 }
 .plan__container {
     display: flex;
+
     justify-content: center;
+
+    @media @notebook {
+        flex-wrap: wrap;
+    }
 }
 .plan__col {
     background-color: @white;
@@ -62,11 +83,20 @@
     border: 1px solid #d7dbe8;
     text-align: center;
     transition: box-shadow .2s linear, border-color .2s linear;
-
+    
+    @media @notebook {
+        width: 70%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    @media @phone-sm {
+        width: 100%;
+    }
     &:hover {
         box-shadow: 0 0 3rem rgba(0,0,0,0.1);
         border-color: transparent;
     }
+
 }
 .plan__content {
     margin-bottom: 4.05rem;
@@ -92,6 +122,9 @@
     &--big {
         font-size: 4rem;
         position: relative;
+        @media @phone-sm {
+            font-size: 3.5rem;
+        }
         &:before {
             position: absolute;
             top: 0.4em;
@@ -106,6 +139,10 @@
     color: @text;
     line-height: 1.75;
     margin-bottom: 5rem;
+
+    @media @phone-sm {
+        font-size: .875rem;
+    }
 }
 
 .plan__button {
