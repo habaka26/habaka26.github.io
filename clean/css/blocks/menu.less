@@ -1,0 +1,39 @@
+// main: ../style.less
+.menu {
+    border-bottom: 1px solid #D8E3FE;
+    background-color: #fff;
+    padding: 1.5rem 0;
+}
+.menu__left {
+    display: -webkit-box;
+    display: flex;
+}
+.menu__logo {
+    padding-right: 4.5rem;
+}
+.menu__nav-links {
+    margin-right: 2.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #697CA6;
+
+    -webkit-transition: color .2s linear;
+
+    transition: color .2s linear;
+    &:hover {
+        color: #5E81FE;
+        text-decoration: none;
+    }
+}
+.menu__socials {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    &-link {
+        margin-right: 2rem;
+        &:last-child {
+            margin-left: 1em;
+        }
+    }
+}

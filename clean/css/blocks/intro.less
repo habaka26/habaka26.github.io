@@ -1,0 +1,60 @@
+// main: ../style.less
+.intro {
+    background-image: url("../img/intro/clouds.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    position: relative;
+    border-bottom: 1px solid #D8E3FE;
+}
+.intro__content {
+    padding-top: 6.25rem;
+}
+
+.intro__suptitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.7em;
+} 
+.intro__title {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+    span {
+        font-weight: 300;
+    }
+    
+}
+.intro__text {
+    font-size: 1.06rem;
+    line-height: 1.91;
+    letter-spacing: 0.03em;
+    margin-bottom: 1.5em;
+}
+.intro__button {
+    display: inline-block;
+    background-color: #fff;
+    height: 52px;
+    border-radius: 50%;
+    width: 52px;
+    position: relative;
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.1);
+    z-index: 1;
+    
+    &:before {
+        content:"";
+        display: block;
+        width: 10px;
+        position: absolute;
+        top: 40%;
+        left: 42%;
+        height: 11px;
+        background-image: url('../img/intro/play.svg');
+    }
+}
+.intro__chart {
+    width: 100%;
+    position: absolute;
+    top: 22%;
+    z-index: 0;
+}

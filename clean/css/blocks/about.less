@@ -1,0 +1,98 @@
+// main: ../style.less
+.about {
+    padding-top: 10.68rem;
+    padding-bottom: 8.68rem;
+    border-bottom: 1px solid #D8E3FE;
+    background: #fff url('../img/about/clouds.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.about__header {
+    text-align: center;
+    margin-bottom: 4.16em;
+}
+.about__suptitle {
+    font-size: 0.625rem;
+    margin-bottom: 2em;
+}
+
+.about__title {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.about__info {
+    position: relative;
+    &:after {
+        content:"";
+        width: 1.75rem;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        right: -55%;
+        display: block;
+        background-color: #dae4fe;
+    }
+}
+.about__head {
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin: 1.54em 0;
+}
+.about__text {
+    font-weight: 400;
+    font-size: 0.6875rem;
+    width: 100%;
+    max-width: 8.75rem;
+    color: #ADB3CB;
+    line-height: 1.77;
+}
+.about__buttons {
+    text-align: center;
+}
+.about__button {
+    position: relative;
+    &:after {
+        content:"";
+        width: 1rem;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        left: -25%;
+        display: block;
+        background-color: #dae4fe;
+    }
+    &--red {
+        background-color: #FFD7D7;
+        color: #D43F3F;
+        position: relative;
+        &:after {
+            content:"";
+            width: 1rem;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            right: -25%;
+            display: block;
+            background-color: #dae4fe;
+        }
+        &:before {
+            content:"OR";
+            text-transform: uppercase;
+            color: #ADB3CB;
+            position: absolute;
+            right:-75%;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+        }
+        &:hover {
+            background-color: #f0c6c6;
+            color: #d43f3f;
+        }
+    }
+}
+.about__links {
+    padding-top: 6.75rem;
+}
