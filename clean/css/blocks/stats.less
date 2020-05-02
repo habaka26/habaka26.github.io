@@ -1,5 +1,6 @@
 // main: ../style.less
 .stats {
+    display: -webkit-box;
     display: flex;
 }
 .stats__left {
@@ -11,8 +12,17 @@
     margin-right: 5.625rem;
     margin-bottom: 4rem;
     margin-top: 4rem;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     &--right {
         margin-left: 5.625rem;
+    }
+    @media @phone {
+        margin-right: 2rem;
+        margin-left: 2rem;
     }
 }
 .stats__right {
@@ -27,6 +37,12 @@
     &--right {
         color: #5e80ff;
     }
+    @media @phone {
+        font-size: 2rem;
+    }
+    @media @phone-sm {
+        font-size: 1.5rem;
+    }
 }
 .stats__text {
     font-size: 1.125rem;
@@ -35,7 +51,22 @@
     font-family: "Quicksand", sans-serif;
     letter-spacing: 0.03em;
     font-weight: 500;
+    width: 100%;
+    max-width:16.25rem;
     &--right {
         color: #5e80ff;
     }
+    @media @phone {
+        font-size: 0.9rem;
+    }
+    @media @phone-sm {
+        font-size: 0.6rem;
+    }
+}
+.stats__info {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
 }

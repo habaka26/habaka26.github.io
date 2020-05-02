@@ -2,36 +2,76 @@
 .quotes {
     background-color: #EAF0FF;
     padding: 6.8rem 0;
+    @media @phone {
+        padding: 5rem 0;
+    }
+    @media @phone-sm {
+        padding: 4rem 0;
+    }
 }
 .quotes__title {
     font-size: 2.25rem;
     margin-bottom: 0.38em;
+    @media @phone-sm {
+        font-size: 1.75rem;
+    }
+}
+.quotes__container {
+    @media @tablet {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: center;
+                justify-content: center;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
 }
 .quotes__text {
     line-height: 1.89;
     font-size: 0.75rem;
     width: 100%;
     max-width: 18.56rem;
+    @media @phone-sm {
+        font-size: 0.6rem;
+    }
 }
 .quotes__slide {
     background-color: #fff;
     border: 1px solid #D8E3FE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: -webkit-box !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     position: relative;
     box-shadow: 0 0 1rem rgba(0,0,0,0.1);
+    
 }
 .quotes__rev {
     font-size: 0.875rem;
     width: 100%;
     max-width: 13.625rem;
     line-height: 1.71;
-    padding-top: 2.5rem;
-    padding-bottom: 3.31rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    @media @phone-sm {
+        font-size: 0.75rem;
+    }
 }
 .quotes__img {
     position: absolute;
     bottom: -15%;
     left: 45%;
+    @media @phone-sm {
+        bottom: -25%;
+        left: 40%;
+    }
+}
+.quotes__wrapper {
+    width: 100%;
+    max-width: 423px;
+}
+.quotes__slider .slick-list {
+    padding-bottom: 3rem;
 }

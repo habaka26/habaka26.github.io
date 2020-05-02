@@ -1,4 +1,11 @@
 // main: ../style.less
+.menu.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
 .menu {
     border-bottom: 1px solid #D8E3FE;
     background-color: #fff;
@@ -7,10 +14,22 @@
 .menu__left {
     display: -webkit-box;
     display: flex;
+
+    @media @notebook {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        z-index: 1000;
+        margin-top: 4.2rem;
+    }
+    @media @phone-sm {
+        margin-top: 1rem;
+    }
 }
-.menu__logo {
-    padding-right: 4.5rem;
-}
+
 .menu__nav-links {
     margin-right: 2.5rem;
     font-size: 0.75rem;
@@ -24,6 +43,27 @@
         color: #5E81FE;
         text-decoration: none;
     }
+    @media @notebook {
+        display: block;
+        margin: 0;
+        padding: 1.5rem 2rem;
+    }
+}
+.menu__socials-nav {
+    display: none;
+    @media @phone-sm {
+        margin-left: 2rem;
+        padding-bottom: 1.5rem;
+    }
+}
+.menu__socials-nav-link {
+    @media @phone-sm {
+        display: inline;
+        padding-left: 1rem;
+        &:first-child {
+            padding-left: 0;
+        } 
+    }
 }
 .menu__socials {
     display: -webkit-box;
@@ -35,5 +75,79 @@
         &:last-child {
             margin-left: 1em;
         }
+    }
+    @media @phone-sm {
+        display: none;
+    }
+}
+.menu__toggle {
+
+	position: absolute;
+    z-index: 1;
+
+	width: 24px;
+	display: none;
+
+	font-size: 0;
+	color: transparent;
+	border:0;
+	background: none;
+    cursor: pointer;
+    left: 0;
+    
+    @media @notebook {
+        display: block;
+    }
+}
+.menu__toggle-item {
+    display: block;
+	width: 100%;
+	height: 3px;
+
+	background: @title;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+    margin: auto;
+    
+    &:after {
+        content: "";
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	background: @title;
+	left: 0;
+	z-index: 1;
+    -webkit-transition: -webkit-transform .2s linear;
+    transition: -webkit-transform .2s linear;
+    transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
+    bottom: -8px;
+    }
+    &:before {
+        content: "";
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	background: @title;
+	left: 0;
+	z-index: 1;
+    -webkit-transition: -webkit-transform .2s linear;
+    transition: -webkit-transform .2s linear;
+    transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
+    top: -8px;
+    }
+}
+.menu__left.active {
+    display: block;
+}
+.menu__socials-nav.active {
+    display: none;
+    @media @phone-sm {
+    display: block;
     }
 }

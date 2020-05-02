@@ -7,6 +7,14 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    @media @notebook {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+    @media @phone {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
 }
 
 .about__header {
@@ -35,6 +43,22 @@
         display: block;
         background-color: #dae4fe;
     }
+    @media @tablet {
+        &:after {
+        width: 1.25rem;
+        right: -25%;
+    }
+    }
+    @media @phone {
+        margin-bottom: 3.5rem;
+
+        &:after {
+            left: 40%;
+            top: 110%;
+    
+        }
+    }
+
 }
 .about__head {
     font-weight: 700;
@@ -51,6 +75,13 @@
 }
 .about__buttons {
     text-align: center;
+    @media @phone {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-align: center;
+                align-items: center;
+    }
 }
 .about__button {
     position: relative;
@@ -63,8 +94,16 @@
         left: -25%;
         display: block;
         background-color: #dae4fe;
+        @media @tablet {
+            display: none;
+        }
+        @media @phone {
+            top: -20%;
+            left: 45%;
+        }
     }
     &--red {
+       
         background-color: #FFD7D7;
         color: #D43F3F;
         position: relative;
@@ -77,6 +116,13 @@
             right: -25%;
             display: block;
             background-color: #dae4fe;
+            @media @tablet {
+                display: none;
+            }
+            @media @phone {
+                top: 120%;
+                right: 41%;
+            }
         }
         &:before {
             content:"OR";
@@ -86,13 +132,30 @@
             right:-75%;
             font-weight: 600;
             font-family: 'Open Sans', sans-serif;
+            @media @notebook {
+                right: -60%;
+            }
+            @media @tablet {
+                right: -32%;
+            }
+            @media @phone {
+                right: 40%;
+                bottom: -100%;
+            }
         }
         &:hover {
             background-color: #f0c6c6;
             color: #d43f3f;
         }
+        @media @phone {
+            margin-bottom: 5em;
+        }
     }
+    
 }
 .about__links {
     padding-top: 6.75rem;
+    @media @phone {
+        padding-top: 3.5rem;
+    }
 }

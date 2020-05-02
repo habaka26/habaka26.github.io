@@ -1,0 +1,76 @@
+// main: ../style.less
+.sign {
+    background-color: #FCFDFF;
+    padding: 7.5rem 0;
+    border-bottom: 1px solid #D8E3FE;
+    @media @phone {
+        padding: 5rem 0;
+    }
+    @media @phone-sm {
+        padding: 3.5rem 0;
+    }
+}
+.sign__title {
+    font-size: 1.125rem;
+    color: @title;
+    font-weight: 700;
+    margin-bottom: 0.8em;
+    @media @phone-sm {
+        font-size: 1rem;
+    }
+}
+.sign__text {
+    font-size: 0.875rem;
+    width: 100%;
+    max-width: 20.625rem;
+    @media @phone-sm {
+        font-size: 0.7rem;
+    }
+}
+.sign__content {
+    @media @phone {
+        margin-bottom: 1.5rem;
+    }
+}
+.sign__input {
+    font-size: 0.8125rem;
+    padding: 1.615em 12.92em 1.615em 1.76em;
+    border: none;
+    background-color: #EFEFF7;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    color: #7A85AD;
+    border-radius: 0.3em;
+    margin-right: 0.5rem;
+    @media @tablet {
+        margin-bottom: 1rem;
+    }
+    @media @phone-sm {
+        padding: 1.615em 8.92em 1.615em 1.76em;
+    }
+}
+.sign__btn {
+    background-color: #4D6CE1;
+    color: #fff;
+    font-size: 0.8125rem;
+    border: none;
+    font-family: "Quicksand", sans-serif;
+    border-radius: 0.3em;
+    font-weight: 700;
+    padding: 1.615em 4.76em;
+
+}
+.sign__form {
+    @media @tablet {
+        text-align: center;
+    }
+    @media @phone {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-align: center;
+                align-items: center;
+    }
+}

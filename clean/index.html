@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700|Quicksand:300,400,500,700|Roboto:400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/other/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/other/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
     
 </head>
@@ -69,64 +68,96 @@
 </symbol>    
 </svg>
 <body>
-    <header class="header">
-        <div class="menu">
+    <header  class="header">
+        <div id="header" class="menu">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-7 d-flex align-items-center" >
-                        <div class="menu__left">
-                            <div class="menu__logo">
-                                <a href="">
+                    <div class="col-xl-7 d-flex align-items-center" >
+                        <div id="menu__left" class="menu__left">
+
+                            <nav id="nav" class="menu__nav">
+                                <a class="menu__nav-links" href="">
                                     <img src="img/menu_icons/logo.svg" alt="">
                                 </a>
-                            </div>
-                            <nav class="menu__nav">
-                                <a href="" class="menu__nav-links">Home</a>
-                                <a href="" class="menu__nav-links">Blog</a>
-                                <a href="" class="menu__nav-links">Features</a>
-                                <a href="" class="menu__nav-links">Pricing</a>
-                                <a href="" class="menu__nav-links">Documentation</a>
+                                <a data-scroll="#home" href="" class="menu__nav-links">Home</a>
+                                <a data-scroll="#blog" href="" class="menu__nav-links">Blog</a>
+                                <a data-scroll="#features" href="" class="menu__nav-links">Features</a>
+                                <a data-scroll="#pricing" href="" class="menu__nav-links">Pricing</a>
+                                <a data-scroll="#documentation" href="" class="menu__nav-links">Documentation</a>
+                                <div id="menu__socials-nav" class="menu__socials-nav">
+                                    <a  href="" class="menu__socials-nav-link">
+                                        <svg class="icon">
+                                            <use xlink:href="#facebook">
+                                            </use>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="menu__socials-nav-link">
+                                        <svg class="icon">
+                                            <use xlink:href="#telegram">
+                                            </use>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="menu__socials-nav-link">
+                                        <svg class="icon">
+                                            <use xlink:href="#medium">
+                                            </use>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="menu__socials-nav-link">
+                                        <svg class="icon">
+                                            <use xlink:href="#twitter">
+                                            </use>
+                                        </svg>
+                                    </a>
+                                </div>
                             </nav>
                         </div>
+                       
                     </div>
-                    <div class="col-md-5 d-flex align-items-center justify-content-end">
-                        <div class="menu__socials">
-                            <a href="" class="menu__socials-link">
-                                <svg class="icon">
-                                    <use xlink:href="#facebook">
-                                    </use>
-                                </svg>
-                            </a>
-                            <a href="" class="menu__socials-link">
-                                <svg class="icon">
-                                    <use xlink:href="#telegram">
-                                    </use>
-                                </svg>
-                            </a>
-                            <a href="" class="menu__socials-link">
-                                <svg class="icon">
-                                    <use xlink:href="#medium">
-                                    </use>
-                                </svg>
-                            </a>
-                            <a href="" class="menu__socials-link">
-                                <svg class="icon">
-                                    <use xlink:href="#twitter">
-                                    </use>
-                                </svg>
-                            </a>
-                            <a href="" class="menu__socials-link btn">
-                                Get started
-                            </a>
+                    <div class="col-xl-5 col-sm d-flex align-items-center justify-content-end">
+                        
+                            <button type="button" class="menu__toggle" id="menu__toggle">
+                                <span class="menu__toggle-item">
+                                    Menu
+                                </span>
+                            </button>
+                            <div class="menu__socials">
+                                <a href="" class="menu__socials-link">
+                                    <svg class="icon">
+                                        <use xlink:href="#facebook">
+                                        </use>
+                                    </svg>
+                                </a>
+                                <a href="" class="menu__socials-link">
+                                    <svg class="icon">
+                                        <use xlink:href="#telegram">
+                                        </use>
+                                    </svg>
+                                </a>
+                                <a href="" class="menu__socials-link">
+                                    <svg class="icon">
+                                        <use xlink:href="#medium">
+                                        </use>
+                                    </svg>
+                                </a>
+                                <a href="" class="menu__socials-link">
+                                    <svg class="icon">
+                                        <use xlink:href="#twitter">
+                                        </use>
+                                    </svg>
+                                </a>
+                                <a href="" class="menu__socials-link btn">
+                                    Get started
+                                </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="intro">
+        <div id="intro" class="intro">
             <div class="container">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-md-7 text-center">
+                    <div class="col-md text-center">
                         <div class="intro__content">
                             <h3 class="intro__suptitle">
                                 PLAN YOUR LIFE
@@ -232,31 +263,31 @@
     <div class="partners">
         <div class="container">
             <div class="row">
-                <div class="col-md">
+                <div class="col-lg d-flex justify-content-center justify-lg-content-start ">
                     <svg class="partners__icon">
                         <use xlink:href="#bitbucket">
                         </use>
                     </svg>
                 </div>
-                <div class="col-md d-flex justify-content-center">
+                <div class="col-lg d-flex justify-content-center">
                     <svg class="partners__icon">
                         <use xlink:href="#watch">
                         </use>
                     </svg>
                 </div>
-                <div class="col-md d-flex justify-content-center">
+                <div class="col-lg d-flex justify-content-center">
                     <svg class="partners__icon">
                         <use xlink:href="#facebook__comp">
                         </use>
                     </svg>
                 </div>
-                <div class="col-md d-flex justify-content-center">
+                <div class="col-lg d-flex justify-content-center">
                     <svg class="partners__icon">
                         <use xlink:href="#atlassian">
                         </use>
                     </svg>
                 </div>
-                <div class="col-md d-flex justify-content-end">
+                <div class="col-lg d-flex justify-lg-content-end justify-content-center">
                     <svg class="partners__icon">
                         <use xlink:href="#audi">
                         </use>
@@ -265,10 +296,10 @@
             </div>
         </div>
     </div>
-    <section class="plan">
+    <section id="home" class="plan">
         <div class="container">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-lg-5">
                     <div class="plan__content">
                         <h3 class="plan__suptitle">
                             DESKTOP AND MOBILE APP
@@ -291,13 +322,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-7">
-                    <img src="img/plan/devices.png" alt="">
+                <div class="col-lg-7">
+                    <img class="plan__img" src="img/plan/devices.png" alt="">
                 </div>
             </div>
         </div>
     </section>
-    <section class="about">
+    <section id="features" class="about">
         
             <div class="about__header">
                 <h3 class="about__suptitle">
@@ -384,31 +415,33 @@
         <div class="stats__left">
             <div class="stats__content">
                 <div class="stats__img">
-                    <img src="img/stats/1.svg" alt="">
+                    <img class="stats__pic" src="img/stats/1.svg" alt="">
                 </div>
                 <h2 class="stats__title">
                     89%
                 </h2>
-                <p class="stats__text">
-                    Customers who have <br> increased their productivity
-                </p>
+                <div class="stats__info">
+                    <p class="stats__text">
+                        Customers who have increased their productivity
+                    </p>
+                </div>
             </div>
         </div>
         <div class="stats__right">
             <div class="stats__content stats__content--right">
                 <div class="stats__img">
-                    <img src="img/stats/2.svg" alt="">
+                    <img class="stats__pic" src="img/stats/2.svg" alt="">
                 </div>
                 <h2 class="stats__title stats__title--right">
                     3123
                 </h2>
                 <p class="stats__text stats__text--right">
-                    Users who have <br> used our application
+                    Users who have used our application
                 </p>
             </div>
         </div>
     </section>
-    <section class="blog">
+    <section id="blog" class="blog">
         <div class="container">
 
                 <div class="row">
@@ -425,32 +458,100 @@
                 </div>
                 <div class="row">
                     <div class="col-md">
-                        <div class="blog__slider-element">
-                            <div class="blog__content">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="blog__images">
-                                                <img class="blog__img" src="img/blog/img.png" alt="">
+                        <div class="blog__slider">
+                            <div class="blog__slider-element">
+                                <div class="blog__content">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="blog__images">
+                                                    <img class="blog__img" src="img/blog/img.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="blog__info">
+                                                    <h4 class="blog__head">
+                                                        How to start planning
+                                                    </h4>
+                                                    <p class="blog__text">
+                                                        Quidam vocibus eum ne, erat consectetuer voluptatibus ut
+                                                        nam. Eu usu vidit tractatos, vero tractatos ius an, in mel 
+                                                        diceret persecuti. Natum petentium principes mei ea. 
+                                                        Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...
+                                                    </p>
+                                                    <a href="" class="blog__button btn">
+                                                        Read now
+                                                    </a>
+                                                    <a href="" class="blog__button blog__button--last">
+                                                        Add to your bookmarks
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="blog__info">
-                                                <h4 class="blog__head">
-                                                    How to start planning
-                                                </h4>
-                                                <p class="blog__text">
-                                                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut
-                                                    nam. Eu usu vidit tractatos, vero tractatos ius an, in mel 
-                                                    diceret persecuti. Natum petentium principes mei ea. 
-                                                    Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...
-                                                </p>
-                                                <a href="" class="blog__button btn">
-                                                    Read now
-                                                </a>
-                                                <a href="" class="blog__button blog__button--last">
-                                                    Add to your bookmarks
-                                                </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog__slider-element">
+                                <div class="blog__content">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="blog__images">
+                                                    <img class="blog__img" src="img/blog/img.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="blog__info">
+                                                    <h4 class="blog__head">
+                                                        How to start planning
+                                                    </h4>
+                                                    <p class="blog__text">
+                                                        Quidam vocibus eum ne, erat consectetuer voluptatibus ut
+                                                        nam. Eu usu vidit tractatos, vero tractatos ius an, in mel 
+                                                        diceret persecuti. Natum petentium principes mei ea. 
+                                                        Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...
+                                                    </p>
+                                                    <a href="" class="blog__button btn">
+                                                        Read now
+                                                    </a>
+                                                    <a href="" class="blog__button blog__button--last">
+                                                        Add to your bookmarks
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="blog__slider-element">
+                                <div class="blog__content">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="blog__images">
+                                                    <img class="blog__img" src="img/blog/img.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="blog__info">
+                                                    <h4 class="blog__head">
+                                                        How to start planning
+                                                    </h4>
+                                                    <p class="blog__text">
+                                                        Quidam vocibus eum ne, erat consectetuer voluptatibus ut
+                                                        nam. Eu usu vidit tractatos, vero tractatos ius an, in mel 
+                                                        diceret persecuti. Natum petentium principes mei ea. 
+                                                        Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...
+                                                    </p>
+                                                    <a href="" class="blog__button btn">
+                                                        Read now
+                                                    </a>
+                                                    <a href="" class="blog__button blog__button--last">
+                                                        Add to your bookmarks
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -459,12 +560,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="blog__dots">
+                    <div class="blog__dot">
+                    </div>
+                    <div class="blog__dot"></div>
+                    <div class="blog__dot"></div>
+                </div>
         </div>
     </section>
     <section class="quotes">
         <div class="container">
             <div class="row">
-                <div class="col-md">
+                <div class="col-lg quotes__container">
                     <div class="quotes__content">
                         <h3 class="quotes__suptitle suptitle">
                             TESTIMONIALS
@@ -478,26 +585,310 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md">
-                        <div class="quotes__slide">
-                           <p class="quotes__rev">
-                            Quidam vocibus eum ne, erat consectetuer
-                            voluptatibus ut nam. Eu usu vidit tractatos,
-                            vero tractatos ius an, in mel diceret 
-                            persecuti.
-                           </p>
-                           <img class="quotes__img" src="img/quotes/ava.png" alt="">
+                <div class="col-lg d-flex justify-content-center">
+                    <div class="quotes__wrapper">
+                        <div class="quotes__slider">
+                            <div class="quotes__slide">
+                                <p class="quotes__rev">
+                                    Quidam vocibus eum ne, erat consectetuer
+                                    voluptatibus ut nam. Eu usu vidit tractatos,
+                                    vero tractatos ius an, in mel diceret 
+                                    persecuti.
+                                </p>
+                                <img class="quotes__img" src="img/quotes/ava.png" alt="">
+                            </div>
+                            
+                            <div class="quotes__slide">
+                                <p class="quotes__rev">
+                                   Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    elit. Dolor, eum unde hic magni deleniti modi quasi
+                                    atque tempora obcaecati temporibus repudiandae.
+                                </p>
+                                <img class="quotes__img" src="img/quotes/ava.png" alt="">
+                            </div>
+
+                            <div class="quotes__slide">
+                                <p class="quotes__rev">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit. Facere, ea ab velit sit pariatur ut saepe eveniet
+                                    officia corrupti fugit nisi!
+                                </p>
+                                <img class="quotes__img" src="img/quotes/ava.png" alt="">
+                            </div>
+
+                            <div class="quotes__slide">
+                                <p class="quotes__rev">
+                                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quasi quidem accusamus veniam excepturi labore nulla fugit aspernatur. Maxime, sapiente rerum?
+                                </p>
+                                <img class="quotes__img" src="img/quotes/ava.png" alt="">
+                            </div>
+
+                            <div class="quotes__slide">
+                                <p class="quotes__rev">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident perferendis quia facere consectetur magnam architecto laborum impedit cumque, quaerat eaque. Architecto.
+                                </p>
+                                <img class="quotes__img" src="img/quotes/ava.png" alt="">
+                            </div>
+
+                            <div class="quotes__slide">
+                                <p class="quotes__rev">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius explicabo sed facilis illum veritatis quisquam nulla exercitationem, autem officiis, sequi magnam.
+                                </p>
+                                <img class="quotes__img" src="img/quotes/ava.png" alt="">
+                            </div>
+
+                            <div class="quotes__slide">
+                                <p class="quotes__rev">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni laudantium ut, quibusdam accusantium tempora mollitia, odit pariatur sint deleniti, aspernatur sed?
+                                </p>
+                                <img class="quotes__img" src="img/quotes/ava.png" alt="">
+                            </div>
+
+                            <div class="quotes__slide">
+                                <p class="quotes__rev">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, mollitia laboriosam velit nesciunt eos optio praesentium, accusamus quo quae laudantium doloremque?
+                                </p>
+                                <img class="quotes__img" src="img/quotes/ava.png" alt="">
+                            </div>
+
+                             <div class="quotes__slide">
+                                <p class="quotes__rev">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque quaerat, corporis veritatis dolore, non error aut facere fugiat culpa nesciunt consectetur.
+                                </p>
+                                <img class="quotes__img" src="img/quotes/ava.png" alt="">
+                            </div>
                         </div>
+                    </div>
                 </div>
-                
             </div>
         </div>
     </section>
+    <section id="documentation" class="questions">
+        <div class="questions__header">
+            <h3 class="questions__suptitle suptitle">
+                CUSTOMER HELP
+            </h3>
+            <h2 class="questions__title title">
+                Frequently asked questions
+            </h2>
+        </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <div class="accordeon">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10">
+                        <div class="accordeon__item" data-collapse="#content_1">
+                            <div class="accordeon__header">
+                                <h2 class="accordeon__title">
+                                    Reque insolens in vel?
+                                </h2>
+                            </div>
+                            <div class="accordeon__content" id="content_1">
+                                <p class="accordeon__text">
+                                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut 
+                                    nam. Eu usu vidit tractatos, vero tractatos ius an, in 
+                                    mel diceret persecuti.
+                                </p>
+                                <a href="" class="accordeon__btn">Go to doucmentation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               <div class="row d-flex justify-content-center">
+                   <div class="col-md-10">
+                    <div class="accordeon__item" data-collapse="#content_2">
+                        <div class="accordeon__header">
+                            <h2 class="accordeon__title">
+                                Vis rebum error graecis ea, id sit postea accusamus?
+                            </h2>
+                        </div>
+                        <div class="accordeon__content" id="content_2">
+                            <p class="accordeon__text">
+                                Quidam vocibus eum ne, erat consectetuer voluptatibus ut 
+                                nam. Eu usu vidit tractatos, vero tractatos ius an, in 
+                                mel diceret persecuti.
+                            </p>
+                            <a href="" class="accordeon__btn">Go to doucmentation</a>
+                        </div>
+                    </div>
+                   </div>
+               </div>
+
+               <div class="row d-flex justify-content-center">
+                   <div class="col-md-10">
+                    <div class="accordeon__item" data-collapse="#content_3">
+                        <div class="accordeon__header">
+                            <h2 class="accordeon__title">
+                                Lorem repudiandae ne nec?
+                            </h2>
+                        </div>
+                        <div class="accordeon__content" id="content_3">
+                            <p class="accordeon__text">
+                                Quidam vocibus eum ne, erat consectetuer voluptatibus ut 
+                                nam. Eu usu vidit tractatos, vero tractatos ius an, in 
+                                mel diceret persecuti.
+                            </p>
+                            <a href="" class="accordeon__btn">Go to doucmentation</a>
+                        </div>
+                    </div>
+            
+                   </div>
+               </div>
+
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10">
+                        <div class="accordeon__item" data-collapse="#content_4">
+                            <div class="accordeon__header">
+                                <h2 class="accordeon__title">
+                                    Ad dicit numquam vel. Et eos iudico feugait percipitur?    
+                            </h2>
+                            </div>
+                            <div class="accordeon__content" id="content_4">
+                                <p class="accordeon__text">
+                                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut 
+                                    nam. Eu usu vidit tractatos, vero tractatos ius an, in 
+                                    mel diceret persecuti.
+                                </p>
+                                <a href="" class="accordeon__btn">Go to doucmentation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10">
+                        <div class="accordeon__item" data-collapse="#content_5">
+                            <div class="accordeon__header">
+                                <h2 class="accordeon__title">
+                                    Sea no dico percipitur. Fierent constituam definitiones id eum?
+                                </h2>
+                            </div>
+                            <div class="accordeon__content" id="content_5">
+                                <p class="accordeon__text">
+                                    Quidam vocibus eum ne, erat consectetuer voluptatibus ut 
+                                    nam. Eu usu vidit tractatos, vero tractatos ius an, in 
+                                    mel diceret persecuti.
+                                </p>
+                                <a href="" class="accordeon__btn">Go to doucmentation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    <section id="pricing" class="started">
+        <div class="started__content">
+            <h3 class="started__suptitle suptitle">
+                PLAN YOUR LIFE
+            </h3>
+            <h2 class="started__title">
+                Get <span class="thick">started</span> now
+            </h2>
+            <p class="started__text">
+                Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens 
+                gubergren similique est cu. Et vel modus congue vituperata.
+            </p>
+            <div class="started__buttons">
+                <a href="" class="started__button">View pricing</a>
+                <a href="" class="started__button started__button--trans">Read documentation</a>
+            </div>
+        </div>
+    </section>
+    <section class="sign">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-md d-flex justify-content-center">
+                    <div class="sign__content">
+                        <h2 class="sign__title">
+                            Sign up for newsletter
+                        </h2>
+                        <p class="sign__text ">
+                            Cu qui soleat partiendo urbanitas. Eum aperiri 
+                            indoctum eu, homero alterum.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <form class="sign__form" action="">
+                        <input class="sign__input" type="text" value="Email address">
+                        <button class="sign__btn" type="submit">Save me</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+            <div class="container">
+                <div class="row footer__menu">
+                    <div class="col-md-7 d-flex align-items-center" >
+                        <div class="menu__left">
+                            <div class="menu__logo">
+                                <a href="">
+                                    <img src="img/menu_icons/logo.svg" alt="">
+                                </a>
+                            </div>
+                            <nav class="menu__nav">
+                                <a href="" class="menu__nav-links">Home</a>
+                                <a href="" class="menu__nav-links">Blog</a>
+                                <a href="" class="menu__nav-links">Features</a>
+                                <a href="" class="menu__nav-links">Pricing</a>
+                                <a href="" class="menu__nav-links">Documentation</a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-5 d-flex align-items-center justify-content-end">
+                        <div class="menu__socials">
+                            <a href="" class="menu__socials-link">
+                                <svg class="icon">
+                                    <use xlink:href="#facebook">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a href="" class="menu__socials-link">
+                                <svg class="icon">
+                                    <use xlink:href="#telegram">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a href="" class="menu__socials-link">
+                                <svg class="icon">
+                                    <use xlink:href="#medium">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a href="" class="menu__socials-link">
+                                <svg class="icon">
+                                    <use xlink:href="#twitter">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a href="" class="menu__socials-link btn">
+                                Get started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="footer__copy">
+                            Copyright &copy; 2018 by Habaka
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

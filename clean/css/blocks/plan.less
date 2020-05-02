@@ -4,9 +4,18 @@
     padding-top: 10.68rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid #D8E3FE;
+    @media @tablet {
+        padding-top: 6rem;
+    }
+    @media @phone-sm {
+        padding-top: 4rem;
+    }
 }
 .plan__content {
     margin-top: 2rem;
+    @media @notebook {
+        margin-bottom: 4rem;
+    }
 }
 .plan__suptitle {
     text-transform: uppercase;
@@ -19,10 +28,19 @@
     span {
         font-weight: 300;
     }
+    @media @phone-sm {
+        font-size: 1.5rem;
+    }
 }
 .plan__text {
     font-size: 0.93rem;
     margin-bottom: 5em;
+    @media @phone {
+        margin-bottom: 3.5em;
+    }
+    @media @phone-sm {
+        font-size: 0.65rem;
+    }
 }
 .plan__button {
     color: #fff;
@@ -52,8 +70,18 @@
             text-decoration: none;
         }
     }
+    @media @phone {
+        font-size: 0.9rem;
+    }
+    @media @phone-sm {
+        font-size: 0.7em;
+    }
 }
 .plan__play {
     height: 10px;
 
+}
+.plan__img {
+    width: 100%;
+    max-width: 100%;
 }

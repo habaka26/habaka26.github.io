@@ -23,6 +23,12 @@
     span {
         font-weight: 300;
     }
+    @media @phone {
+        font-size: 2.5rem;
+    }
+    @media @phone-sm {
+        font-size: 1.3rem;
+    }
     
 }
 .intro__text {
@@ -30,6 +36,12 @@
     line-height: 1.91;
     letter-spacing: 0.03em;
     margin-bottom: 1.5em;
+    @media @phone {
+        font-size: 0.9rem;
+    }
+    @media @phone-sm {
+        font-size: 0.6rem;
+    }
 }
 .intro__button {
     display: inline-block;
@@ -51,10 +63,21 @@
         height: 11px;
         background-image: url('../img/intro/play.svg');
     }
+
+    @media @phone {
+        width: 45px;
+        height: 45px;
+    }
 }
 .intro__chart {
     width: 100%;
     position: absolute;
     top: 22%;
     z-index: 0;
+    @media @notebook {
+        top: 40%;
+    }
+    @media @phone {
+        top: 50%;
+    }
 }

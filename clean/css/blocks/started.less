@@ -1,0 +1,84 @@
+// main: ../style.less
+.started {
+    background: #567AFF url("../img/started/clouds.svg");
+    display: -webkit-box;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding: 5.68rem 0;
+    
+}
+.started__suptitle {
+    color: #fff;
+}
+.started__title {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 0.5em;
+    @media @phone {
+        font-size: 2.5rem;
+    }
+}
+.started__text {
+    font-size: 0.9375rem;
+    color: #fff;
+    width: 100%;
+    max-width: 44.5rem;
+    margin-bottom: 3em;
+    padding: 0 1rem;
+
+    @media @phone {
+        font-size: 0.75rem;
+    }
+    @media @phone-sm {
+        font-size: 0.6rem;
+    }
+}
+.started__buttons {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+}
+.started__button {
+    color: #565F82;
+    background-color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    padding: 0.9em 0.7em;
+    border-bottom-left-radius: 0.2em;
+    border-top-left-radius: 0.2em;
+    border: 1px solid #fff;
+
+    &:hover {
+        color: #565F82;
+        text-decoration: none;
+    }
+
+    &--trans {
+        background-color: transparent;
+        border-color:#C7D3FF;
+        color: #C7D3FF;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        font-weight: 500;
+        border-left: 0;
+
+
+        &:hover {
+            color:#C7D3FF;
+            text-decoration: none;
+        }
+    }
+
+    @media @phone {
+        font-size: 0.75em;
+    }
+    @media @phone-sm {
+        font-size: 0.65em;
+    }
+}

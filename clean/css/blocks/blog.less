@@ -2,11 +2,17 @@
 .blog {
     background-color: #F5F8FF;
     padding-top: 6.5rem;
-    padding-bottom: 13.31rem;
+    padding-bottom: 6.25rem;
     border-bottom: 1px solid #D8E3FE;
+    @media @phone {
+        padding-bottom: 3rem;
+    }
 }
 .blog__content {
     padding: 3.93rem 2.5rem;
+    @media @phone {
+        padding: 3rem 2rem;
+    }
 }
 .blog__title {
     margin-bottom: 5.75rem;
@@ -16,15 +22,28 @@
     border: 1px solid #D8E3FE;
     border-radius: 2px;
 }
+.blog__slider {
+    position: relative;
+}
 .blog__text {
     font-size: 0.875rem;
     width: 100%;
     max-width: 25.5rem;
     margin-bottom: 2.214em;
+    @media @phone {
+        font-size: 0.7rem;
+    }
 }
 .blog__head {
     font-size: 2.25rem;
     margin-bottom: 1.125em;
+    @media @phone {
+        font-size: 1.5rem;
+    }
+
+    @media @phone-sm {
+        font-size: 1.1rem;
+    }
 }
 .blog__button {
     font-size: 0.8125rem;
@@ -33,13 +52,77 @@
     &--last {
         color: #a6b6da;
         margin-right: 0;
+        -webkit-transition: color .2s linear;
         transition: color .2s linear;
         &:hover {
             text-decoration: none;
             color: #3a79ff;
         }
     }
+    @media @phone {
+        font-size: 0.75rem;
+    }
+    @media @phone-sm {
+        font-size: 0.5em;
+    }
 }
 .blog__img {
     box-shadow: 0 0 1rem rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 100%;
+}
+.blog__arrow-prev {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    left:-7%;
+
+    @media @phone-sm {
+        width: 20px;
+        left: -1%;
+    }
+
+}
+.blog__arrow-next {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    right: -7%;
+    @media @phone-sm {
+        width: 20px;
+        right: -1%;
+    }
+
+}
+.slick-dots {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-top: 6.25rem;
+
+    @media @phone {
+        margin-top: 3rem;
+    }
+    
+}
+.slick-dots li {
+    list-style: none;
+    margin-right: 1rem;
+}
+.slick-dots li button {
+    background: #D1D6E3;
+    border-radius: 50%;
+    width: 8px;
+    height: 12px;
+    border:  none;
+    font-size: 0;
+
+}
+.slick-dots li.slick-active button {
+    background-color: #5283FF;
 }
