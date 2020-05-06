@@ -1,0 +1,53 @@
+// main: ../style.less
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
+    
+}
+.header.fixed {
+    position: fixed;
+    background: linear-gradient(238.34deg, #FF0000 -232.85%, #03103B 55.35%), #03103B;
+    
+    .header__inner {
+        padding-top: 0;
+    }
+    .header__logo {
+        opacity: 0;
+    }
+}
+.header__inner {
+    padding-top: 2.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__link {
+    font-size: 0.875rem;
+    margin-right: 3.85em;
+    color: @white;
+    display: inline-block;
+    position: relative;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:after {
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: @white;
+        display: inline-block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        transition: width .2s linear;
+    }
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
+}

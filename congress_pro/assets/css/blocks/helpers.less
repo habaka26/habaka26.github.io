@@ -1,0 +1,39 @@
+// main: ../style.less
+.yellow {
+    color: @accentyellow;
+}
+.title {
+    font-size: 2.25rem;
+    text-align: center;
+    position: relative;
+    color: @accentdark;
+
+    &:after {
+        content:"";
+        display: block;
+        width: 3.75rem;
+        height: 1px;
+        background-color: @accentdark;
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    &--white {
+        &:after {
+            background-color: @white;
+        }
+    }
+}
+.button {
+    background: linear-gradient(249.35deg, #FF00B8 -227.67%, #03103B 89.95%), #4611DD;
+    font-size: 1.125rem;
+    padding: 0.68em 1.22em; 
+    margin-right: 1.625rem;
+    border-radius: 3px;
+    &--trans {
+        background: transparent;
+        border: 1px solid @white;
+        padding: 0.61em 1.22em;
+    }
+}

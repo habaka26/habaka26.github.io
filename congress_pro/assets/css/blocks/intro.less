@@ -1,0 +1,51 @@
+// main: ../style.less
+.intro {
+    height: 100vh;
+    background: url('../../assets/img/intro_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 77%, 0 95%);
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     display: block;
+    //     border-bottom: 10rem solid @white;
+    //     border-left: 100rem solid transparent;
+    // }
+
+}
+.intro__title {
+    color: @white;
+    font-size: 3rem;
+    margin-bottom: 0.66em;
+    width: 100%;
+    max-width: 38.06rem;
+
+}
+.intro__text {
+    color: @white;
+    font-size: 1.125rem;
+    margin-bottom: 1.77em;
+    width: 100%;
+    max-width: 17.06rem;
+}
+.intro__button {
+    background: linear-gradient(249.35deg, #FF00B8 -227.67%, #03103B 89.95%), #4611DD;
+    font-size: 1.125rem;
+    padding: 0.68em 1.22em; 
+    margin-right: 1.625rem;
+    border-radius: 3px;
+    &--trans {
+        background: transparent;
+        border: 1px solid @white;
+        padding: 0.61em 1.22em;
+    }
+}

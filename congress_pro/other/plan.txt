@@ -1,0 +1,9 @@
+landing page - 1page
+adaptive
+menu:
+about us
+about equipments
+services
+callback
+
+
