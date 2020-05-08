@@ -1,0 +1,29 @@
+// main: ../style.less
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3.25rem;
+}
+.header__link {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-right: 6em;
+    text-transform: uppercase;
+    &:last-child {
+        margin-right: 0;
+    }
+    &--red {
+        background-color: @red;
+        padding: 1.25em 1.5em;
+        border-radius: 5px;
+    }
+}
