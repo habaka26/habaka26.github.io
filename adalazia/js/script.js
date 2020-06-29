@@ -19,8 +19,8 @@ AOS.init({
   delay: 0, // values from 0 to 3000, with step 50ms
   duration: 700, // values from 0 to 3000, with step 50ms
   easing: 'ease', // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
+  once: true, // whether animation should happen only once - while scrolling down
+  mirror: true, // whether elements should animate out while scrolling past them
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
@@ -36,7 +36,54 @@ function testWebP(callback) {
 
 $(document).ready(function(){
     $('.header__burger').click(function(event){
-        $('.header__burger, .header__nav, body').toggleClass('active');
+        $('.header__burger, .header__nav, body').toggleClass('active');  
     })
+    var header = $("#header"),
+introH = $("#intro").innerHeight(),
+ scrollOffset = $(window).scrollTop();
+ /* header fixed*/
+checkScroll(scrollOffset); 	
+
+$(window).on("scroll", function () {
+scrollOffset = $(this).scrollTop();
+
+checkScroll(scrollOffset);
+});
+
+
+function checkScroll() {
+if( scrollOffset >= introH ) {
+    header.addClass("fixed");
+} else {
+    header.removeClass("fixed");
+}
+}
 })
 
+let isMobile = {
+	Android: function() {return navigator.userAgent.match(/Android/i);},
+	BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
+	iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
+	Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
+	Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
+	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+};
+
+let body = document.querySelector('body');
+if(isMobile.any()) {
+    body.classList.add('touch');
+    let arrow = document.querySelectorAll('.arrow')
+    for(i=0;i<arrow.length; i++) {
+        let thisLink = arrow[i].previousElementSibling
+        let subMenu = arrow[i].nextElementSibling
+        let thisArrow = arrow[i]
+
+        thisLink.classList.add('parent')
+        arrow[i].addEventListener('click', function(){
+            subMenu.classList.toggle('open')
+            thisArrow.classList.toggle('active')
+        })
+    }
+} else {
+    body.classList.add('mouse');
+}
