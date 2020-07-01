@@ -11,6 +11,19 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <svg style="display: none;">
+        <symbol id="close" viewBox="0 0 511.76 511.76">
+            <g>
+                <path d="M436.896,74.869c-99.84-99.819-262.208-99.819-362.048,0c-99.797,99.819-99.797,262.229,0,362.048
+                c49.92,49.899,115.477,74.837,181.035,74.837s131.093-24.939,181.013-74.837C536.715,337.099,536.715,174.688,436.896,74.869z
+                 M361.461,331.317c8.341,8.341,8.341,21.824,0,30.165c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251
+                l-75.413-75.435l-75.392,75.413c-4.181,4.16-9.643,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251
+                c-8.341-8.341-8.341-21.845,0-30.165l75.392-75.413l-75.413-75.413c-8.341-8.341-8.341-21.845,0-30.165
+                c8.32-8.341,21.824-8.341,30.165,0l75.413,75.413l75.413-75.413c8.341-8.341,21.824-8.341,30.165,0
+                c8.341,8.32,8.341,21.824,0,30.165l-75.413,75.413L361.461,331.317z"/>
+            </g>
+        </symbol>
+    </svg>
     <!-- header -->
     <header id="header" class="header">
         <div class="container">
@@ -58,7 +71,7 @@
                         <a data-scroll="#services" href="#" class="intro__button">
                             Узнать подробнее
                         </a>
-                        <a href="#" class="intro__button intro__button--trans">
+                        <a data-modal="#modal" href="#" class="intro__button intro__button--trans">
                             Заказать звонок
                         </a>
                     </div>
@@ -84,7 +97,7 @@
                                 Устный перевод на аудиторию до 1000 человек с использованием 
                                 современного беспроводного оборудования. 
                             </p>
-                            <a href="" class="services__button button">
+                            <a data-modal="#modal" href="" class="services__button button">
                                 Заказать
                             </a>
                         </div>
@@ -97,7 +110,7 @@
                             <p class="services__text">
                                 Идеальный вариант для встреч малого формата, переговоров, тренингов.    
                             </p>
-                            <a href="" class="services__button button">
+                            <a data-modal="#modal" href="" class="services__button button">
                                 Заказать
                             </a>
                         </div>
@@ -111,7 +124,7 @@
                                 Синхронный или последовательный перевод на онлайн-платформах для экономии времени, 
                                 средств и обеспечения вашей безопасности.
                             </p>
-                            <a href="" class="button services__button">
+                            <a data-modal="#modal" href="" class="button services__button">
                                 Заказать
                             </a>
                         </div>
@@ -145,7 +158,7 @@
                     </div>
                 </div>
                 <div data-aos="fadeInLeft" class="equipment__link">
-                    <a href="" class="button button--trans equipment__button">
+                    <a data-modal="#modal" href="" class="button button--trans equipment__button">
                         Заказать
                     </a>
                 </div>
@@ -222,7 +235,7 @@
                             </div>
                     </div>
 
-                    <a href=" " class="about__button button">
+                    <a data-modal="#modal" href=" " class="about__button button">
                         Заказать
                     </a>
             </div>
@@ -279,7 +292,7 @@
                         </a>
                         <a data-scroll="#about" href="" class="footer__link">О нас</a>
                         <a data-scroll="#contacts" href="" class="footer__link">Контакты</a>
-                        <a data-scroll="#services" href="" class="footer__link">Заказать</a>
+                        <a  href="" class="footer__link" data-modal="#modal">Заказать</a>
                     </nav>
                 </div>
             </div>
@@ -289,6 +302,44 @@
         </div>
     </footer>
     <!-- ./footer -->
+    <!-- modal -->
+    <div class="modal" id="modal">
+        <div class="modal__dialog">
+           <button class="modal__close" data-close>
+               <svg class="close">
+                    <use xlink:href="#close">
+                    </use>
+               </svg>
+           </button>
+            <h2 class="modal__title title-accent">
+                Заказать услугу
+            </h2>
+            <div class="modal__content">
+                <form class="form" method="post" id="form">
+    
+                               <div class="form__group">
+                                   <label class="form__label" for="input-email">Ваше имя</label>
+                                   <input type="text" name="name" class="form__input">
+                               </div>
+    
+                               <div class="form__group">
+                                   <label class="form__label" for="input-email">Ваш номер</label>
+                                   <input type="number" name="number" class="form__input">
+                               </div>
+                               <div class="form__group">
+                                   <label class="form__label" for="input-email">Ваш E-mail</label>
+                                   <input type="email" name="email" class="form__input">
+                               </div>
+                               <button type="submit" class="modal__btn">
+                                    Отправить
+                               </button>
+    
+    
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ./modal -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
